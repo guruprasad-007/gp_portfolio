@@ -1,0 +1,230 @@
+/* Certifications.css - Monochrome Theme */
+
+.certifications-section {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: right;
+  margin-bottom: 50px;
+  color: #222;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #444;
+}
+
+.certification-year-group {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.year-heading {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.year-heading:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #555;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.year-heading:after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: #999;
+  margin-left: 15px;
+}
+
+.certifications-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.certification-card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  padding: 25px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #444;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  border-left: 4px solid #000;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.issuer-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo backgrounds - monochrome shades */
+.cisco-logo { background-color: #222; }
+.celonis-logo { background-color: #333; }
+.uipath-logo { background-color: #444; }
+.buffalo-logo { background-color: #555; }
+.coursera-logo { background-color: #666; }
+.ibm-logo { background-color: #777; }
+.meta-logo { background-color: #888; }
+
+.cert-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222;
+  letter-spacing: -0.2px;
+}
+
+.issuer {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.card-details {
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.credential {
+  font-size: 0.85rem;
+  color: #777;
+  font-style: italic;
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.view-btn:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.arrow-icon {
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+.view-btn:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .certifications-row {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .section-title:after {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+  }
+  
+  .certification-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .certification-card {
+    padding: 20px 15px;
+  }
+  
+  .issuer-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .year-heading {
+    font-size: 1.5rem;
+  }
+}
