@@ -30,15 +30,15 @@ const About = () => {
 
         {/* Right Image Section */}
         <div className="about-image">
-          <img
-            src="/profile.jpg"
-            alt="Guru Prasad"
-            className="profile-image"
-            onError={(e) => {
-              e.target.src = 'https://via.placeholder.com/350';
-            }}
-          />
-        </div>
+  <img
+    src={`${process.env.PUBLIC_URL}/profile.jpg`} 
+    alt="Guru Prasad"
+    className="profile-image"
+    onError={(e) => {
+      e.target.src = 'https://via.placeholder.com/350';
+    }}
+  />
+</div>
       </div>
     </section>
   );

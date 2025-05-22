@@ -15,10 +15,10 @@ const Navbar = () => {
         <div className="logo-container">
           <a href="#home" className="logo-link">
             <img 
-              src="/GURU.jpg" 
-              alt="Guru Prasad Logo" 
-              className="logo-image"
-            />
+  src={`${process.env.PUBLIC_URL}/GURU.jpg`} 
+  alt="Guru Prasad Logo" 
+  className="logo-image" 
+/>
             <span className="logo-text">Guru Prasad</span>
           </a>
         </div>
