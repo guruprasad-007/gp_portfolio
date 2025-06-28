@@ -50,6 +50,7 @@ const Experience = () => {
                   <h3>{exp.title}</h3>
                   <div className="experience-meta">
                     <span className="company">{exp.company}</span>
+                    <span className="separator">|</span>
                     <span className="period">{exp.period}</span>
                   </div>
                 </div>

@@ -20,6 +20,30 @@ const Certifications = () => {
         credential: '',
         link: 'https://www.credly.com/badges/3671bdc6-fafe-46b5-be18-3dba15882030/linked_in_profile',
         logo: 'cisco'
+      },
+      {
+        title: 'CCNA: Enterprise Networking, Security, and Automation',
+        issuer: 'Cisco',
+        date: 'May 2025',
+        credential: '',
+        link: '#https://www.credly.com/badges/67c0460a-298f-4174-8446-e7fd6d86d13e/linked_in_profile',
+        logo: 'cisco'
+      },
+      {
+        title: 'CCNA: Introduction to Networks',
+        issuer: 'Cisco',
+        date: 'May 2025',
+        credential: '',
+        link: '#https://www.credly.com/badges/9a268a8f-ab13-46e3-9d3c-42a97bb971de/linked_in_profile',
+        logo: 'cisco'
+      },
+      {
+        title: 'CCNA: Switching, Routing, and Wireless Essentials',
+        issuer: 'Cisco',
+        date: 'May 2025',
+        credential: '',
+        link: '#https://www.credly.com/badges/24253b0a-fa24-414e-938c-53658add3458/linked_in_profile',
+        logo: 'cisco'
       }
     ],
     '2024': [

@@ -10,12 +10,12 @@ const About = () => {
       </div>
 
       <div className="about-grid container">
-        {/* Left Text Section */}
+        {/* Left Text Section - moved to top on mobile */}
         <div className="about-details">
           <p className="about-paragraph">
-            I’m Guru Prasad, a curious Computer Science explorer who codes by day and animates in Blender by night—because why not bring both logic and imagination to life? Whether I’m training machine learning models, building full-stack apps, or creating 3D animations that might just make your screen do a little happy dance, I love turning tricky problems into clever, creative solutions (often fueled by coffee and the occasional “why isn’t this working?!” moment).  
+            I'm Guru Prasad, a curious Computer Science explorer who codes by day and animates in Blender by night—because why not bring both logic and imagination to life? Whether I'm training machine learning models, building full-stack apps, or creating 3D animations that might just make your screen do a little happy dance, I love turning tricky problems into clever, creative solutions (often fueled by coffee and the occasional "why isn't this working?!" moment).  
             <br /><br />
-            I believe in writing clean code, training smart models, crafting eye-catching animations, and occasionally naming variables after food (because who doesn’t love a well-fed algorithm?).  
+            I believe in writing clean code, training smart models, crafting eye-catching animations, and occasionally naming variables after food (because who doesn't love a well-fed algorithm?).  
             <br /><br />
             Welcome to the digital playground where curiosity meets caffeine, creativity runs wild, and a little bit of animation adds extra sparkle.
           </p>
@@ -28,17 +28,17 @@ const About = () => {
           </div>
         </div>
 
-        {/* Right Image Section */}
+        {/* Right Image Section - moved to bottom on mobile */}
         <div className="about-image">
-  <img
-    src={`${process.env.PUBLIC_URL}/profile.jpg`} 
-    alt="Guru Prasad"
-    className="profile-image"
-    onError={(e) => {
-      e.target.src = 'https://via.placeholder.com/350';
-    }}
-  />
-</div>
+          <img
+            src={`${process.env.PUBLIC_URL}/profile.jpg`} 
+            alt="Guru Prasad"
+            className="profile-image"
+            onError={(e) => {
+              e.target.src = 'https://via.placeholder.com/350';
+            }}
+          />
+        </div>
       </div>
     </section>
   );

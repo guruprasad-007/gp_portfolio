@@ -1,15 +1,15 @@
 .about-section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   background-color: #000000;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #fffcfccb;
   margin-bottom: 15px;
 }
@@ -27,18 +27,22 @@
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .about-details {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .about-paragraph {
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: #d8d5d5;
+  text-align: left;
 }
 
 .highlight {
@@ -56,11 +60,13 @@
 .info-item {
   font-size: 1rem;
   color: #e3e1e1;
+  text-align: left;
 }
 
 .info-label {
   font-weight: 600;
   margin-right: 8px;
+  color: #ffffff;
 }
 
 /* Image */
@@ -75,22 +81,66 @@
   max-width: 350px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgb(234, 231, 231);
+  box-shadow: 0 10px 30px rgba(234, 231, 231, 0.3);
   object-fit: cover;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: 30px;
   }
+  
+  .about-image {
+    order: -1; /* Move image to top on mobile */
+    margin-bottom: 20px;
+  }
+  
+  .profile-image {
+    max-width: 280px;
+  }
+}
 
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .about-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
   .personal-info {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
+  
+  .info-item {
+    font-size: 0.95rem;
+  }
+}
 
-  .about-image {
-    margin-top: 30px;
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 10px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .underline {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .profile-image {
+    max-width: 220px;
   }
 }

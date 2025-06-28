@@ -1,13 +1,19 @@
 .footer {
-  background-color: #101820;
-  color: #333;
+  background-color: #000000;
+  color: #000000;
   padding: 60px 0 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.footer-content {
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 }
 
 /* Tech Icons Scroll Section */
@@ -48,24 +54,19 @@
   display: flex;
   gap: 40px;
   padding: 20px 0;
-  width: max-content;
+  animation: scroll-left 20s linear infinite;
+  white-space: nowrap;
 }
 
-/* Infinite scroll animation */
 @keyframes scroll-left {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.33%);
   }
 }
 
-.animate-scroll {
-  animation: scroll-left 30s linear infinite;
-}
-
-/* Tech Icon Styling */
 .tech-icon {
   display: flex;
   flex-direction: column;
@@ -73,6 +74,7 @@
   color: white;
   opacity: 0.8;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .tech-icon:hover {
@@ -102,6 +104,7 @@
 
 .footer-links a {
   color: white;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -118,7 +121,7 @@
 
 .social-icon {
   font-size: 1.5rem;
-  color: white; /* This should make all social icons white, including Instagram */
+  color: white;
   transition: color 0.3s ease;
 }
 
@@ -129,6 +132,7 @@
 .copyright {
   color: rgba(255,255,255,0.7);
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* Responsive Styling */
@@ -140,9 +144,22 @@
   .tech-icon svg {
     font-size: 2rem;
   }
+  
+  .tech-icons-scroll {
+    gap: 30px;
+  }
 }
 
-
-.social-links .instagram-icon path {
-  fill: white;
+@media (max-width: 480px) {
+  .footer-links {
+    gap: 15px;
+  }
+  
+  .social-links {
+    gap: 15px;
+  }
+  
+  .footer {
+    padding: 40px 0 20px;
+  }
 }

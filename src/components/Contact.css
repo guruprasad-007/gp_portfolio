@@ -1,25 +1,50 @@
 .contact-section {
-  padding: 100px 0;
-  background-color: #ffffff;
+  padding: 80px 20px;
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ffffff;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #bcbbb9;
 }
 
 .contact-content {
-  display: flex;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 .contact-info {
-  flex: 1;
-  background: #000000ef;
-  padding: 40px;
-  border-radius: 8px;
-  color: rgb(252, 252, 252);
-  box-shadow: 0 5px 15px rgba(90, 94, 95, 0.486);
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
 }
 
 .contact-info h3 {
+  font-size: 1.5rem;
   margin-bottom: 30px;
-  color: #e4e0e0ed;
+  color: #ffffff;
 }
 
 .info-item {
@@ -27,6 +52,7 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
 .info-item .icon {
@@ -41,34 +67,43 @@
 }
 
 .social-icon {
-  font-size: 1.5rem;
-  color: rgb(255, 255, 255);
-  transition: color 0.3s ease;
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #f9c74f;
+  color: #fcfcfb;
+  transform: translateY(-3px);
 }
 
 .contact-form {
-  flex: 1;
-  background: #030303;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgb(251, 249, 249);
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #000000;
-  border-radius: 4px;
+  padding: 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #222;
+  color: white;
   font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f9f9f8;
 }
 
 .form-group textarea {
@@ -77,28 +112,172 @@
 }
 
 .submit-btn {
-  background-color: #f0f0f1;
-  color: rgb(0, 0, 0);
+  background: #fbfbfb;
+  color: #000;
   border: none;
-  padding: 12px 30px;
-  border-radius: #faf9f9;
-  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 5px;
   font-size: 1rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .submit-btn:hover {
-  background-color: #ffffff;
-  color: #101820;
+  background: #00000000;
+  color: #bcbbb9;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.status-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.status-message.success {
+  background: rgba(46, 125, 50, 0.2);
+  color: #81c784;
+}
+
+.status-message.error {
+  background: rgba(211, 47, 47, 0.2);
+  color: #e57373;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-content {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 768px) {
   .contact-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
   
-  .contact-info {
+  .section-title {
+    font-size: 2rem;
     margin-bottom: 40px;
   }
+  
+  .contact-info,
+  .contact-form {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 60px 15px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .info-item {
+    font-size: 0.95rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+  }
+  
+  .submit-btn {
+    padding: 12px 25px;
+  }
+
+  /* Add these styles to your existing Contact.css */
+
+/* Elegant Resume Download Section */
+.resume-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #f9c74f 0%, #f8961e 100%);
+  color: #121212;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin: 25px 0 35px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(249, 199, 79, 0.3);
+}
+
+.resume-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(249, 199, 79, 0.4);
+}
+
+.resume-btn:hover::before {
+  left: 100%;
+}
+
+.resume-btn .icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.resume-btn:hover .icon {
+  transform: translateY(-2px);
+}
+
+.resume-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pulse animation on hover */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.resume-btn:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resume-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-btn {
+    margin: 20px 0 30px;
+  }
+}
+  
 }

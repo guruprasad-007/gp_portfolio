@@ -1,37 +1,36 @@
 /* Experience.css */
 .experience-section {
-  padding: 100px 0;
+  padding: 60px 0;
   background-color: #121212;
   color: #f0edecd6;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .section-header {
-  text-align: left; /* was center */
-  margin-bottom: 60px;
-  padding-left: -1000px; /* give it space from the left */
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-
 .section-title {
-  font-size:#f0edecd6;
-  margin-bottom: 5px;
+  font-size: 2rem;
+  color: #f0edecd6;
+  margin-bottom: 10px;
   position: relative;
   display: inline-block;
-  margin-left: -10%; /* move title left */
 }
 
 .section-title::after {
   content: '';
-  position: relative;
+  position: absolute;
   bottom: -10px;
-  left: 0%;
+  left: 50%;
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
@@ -40,7 +39,7 @@
 
 .section-subtitle {
   color: #aaa;
-  font-size: 1.1rem;
+  font-size: 1rem;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -49,23 +48,23 @@
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding-left: 100px;
+  padding-left: 30px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: 10px;
   top: 0;
   height: 100%;
-  width: 3px;
+  width: 2px;
   background: linear-gradient(to bottom, #f0edecd6, #121212);
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
-  padding-left: 30px;
+  margin-bottom: 30px;
+  padding-left: 20px;
 }
 
 .timeline-item:last-child {
@@ -75,45 +74,46 @@
 .timeline-content {
   background: #1e1e1e;
   border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(204, 201, 198, 0.678);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(204, 201, 198, 0.4);
 }
 
 .timeline-content::before {
   content: '';
   position: absolute;
-  left: -10px;
-  top: 30px;
-  width: 20px;
-  height: 20px;
+  left: -8px;
+  top: 25px;
+  width: 16px;
+  height: 16px;
   background-color: #f0edecd6;
   border-radius: 50%;
   border: 3px solid #121212;
 }
 
 .experience-header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .experience-header h3 {
   color: #f0edecd6;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
 .experience-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  align-items: center;
+  gap: 8px;
   color: #aaa;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .company {
@@ -121,13 +121,18 @@
   font-weight: 500;
 }
 
+.separator {
+  color: #666;
+}
+
 .experience-description {
-  padding-left: 5px;
+  padding-left: 0;
+  list-style: none;
 }
 
 .experience-description li {
-  margin-bottom: 10px;
-  line-height: 1.6;
+  margin-bottom: 8px;
+  line-height: 1.5;
   color: #ccc;
   position: relative;
   padding-left: 20px;
@@ -137,41 +142,63 @@
   color: #f0edecd6;
   position: absolute;
   left: 0;
+  top: 0;
 }
 
-@media (max-width: 768px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
   .experience-section {
-    padding: 70px 0;
+    padding: 80px 0;
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .timeline {
+    padding-left: 50px;
+  }
+  
+  .timeline::before {
+    left: 20px;
+    width: 3px;
+  }
+  
+  .timeline-item {
     padding-left: 30px;
   }
   
   .timeline-content {
-    padding: 20px;
-  }
-  
-  .experience-header h3 {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .experience-meta {
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .timeline::before {
-    left: -5px;
+    padding: 30px;
   }
   
   .timeline-content::before {
-    left: -15px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.4rem;
+  }
+  
+  .experience-meta {
+    font-size: 0.95rem;
+    gap: 15px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .experience-section {
+    padding: 100px 0;
+  }
+  
+  .timeline {
+    padding-left: 100px;
+  }
+  
+  .timeline::before {
+    left: 30px;
   }
 }

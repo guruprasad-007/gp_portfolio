@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Contact.css';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaFileDownload } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -29,26 +29,22 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     
-    // Using EmailJS to send form data directly to your email
     emailjs.sendForm(
-      'service_uwcua6m', // Create on emailjs.com
-      'template_2b6sitv', // Create on emailjs.com
+      'service_uwcua6m',
+      'template_2b6sitv',
       form.current,
-      'Dy_Vo8CdmAmtg4r_5' // Get from emailjs.com
+      'Dy_Vo8CdmAmtg4r_5'
     )
     .then((result) => {
-      console.log('Email sent successfully:', result.text);
       setStatus({
         submitted: true,
         success: true,
         message: 'Message sent successfully!'
       });
-      // Reset form
       setFormData({ name: '', email: '', message: '' });
       setLoading(false);
     })
     .catch((error) => {
-      console.error('Failed to send email:', error.text);
       setStatus({
         submitted: true,
         success: false,
@@ -58,10 +54,21 @@ const Contact = () => {
     });
   };
 
+  const handleDownloadResume = () => {
+    // Replace with your actual resume file path
+    const resumeUrl = `${process.env.PUBLIC_URL}/GuruPrasad_Resume.pdf`;
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'GuruPrasad_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <h2>Get In Touch</h2>
+        <h2 className="section-title">Get In Touch</h2>
         <div className="contact-content">
           <div className="contact-info">
             <h3>Contact Information</h3>
@@ -73,6 +80,10 @@ const Contact = () => {
               <FaPhone className="icon" />
               <span>+91 8247319091</span>
             </div>
+            <button className="resume-btn" onClick={handleDownloadResume}>
+              <FaFileDownload className="icon" />
+              <span>Download Resume</span>
+            </button>
             <div className="social-links">
               <a href="https://github.com/guruprasad-007" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="social-icon" />
