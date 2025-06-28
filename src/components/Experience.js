@@ -40,7 +40,7 @@ const Experience = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Professional Experience</h2>
-          <div className="section-subtitle">My career journey and accomplishments</div>
+          <p className="section-subtitle">My career journey and accomplishments</p>
         </div>
         <div className="timeline">
           {experiences.map((exp, index) => (

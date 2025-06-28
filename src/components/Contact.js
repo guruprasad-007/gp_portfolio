@@ -39,7 +39,7 @@ const Contact = () => {
       setStatus({
         submitted: true,
         success: true,
-        message: 'Message sent successfully!'
+        message: 'Message sent successfully! I will get back to you soon.'
       });
       setFormData({ name: '', email: '', message: '' });
       setLoading(false);
@@ -48,7 +48,7 @@ const Contact = () => {
       setStatus({
         submitted: true,
         success: false,
-        message: 'Failed to send message. Please try again.'
+        message: 'Failed to send message. Please try again or email me directly at jbguruprasad17@gmail.com'
       });
       setLoading(false);
     });
@@ -80,15 +80,31 @@ const Contact = () => {
               <FaPhone className="icon" />
               <span>+91 8247319091</span>
             </div>
-            <button className="resume-btn" onClick={handleDownloadResume}>
+            
+            <button 
+              className="resume-btn" 
+              onClick={handleDownloadResume}
+              aria-label="Download Resume"
+            >
               <FaFileDownload className="icon" />
               <span>Download Resume</span>
             </button>
+            
             <div className="social-links">
-              <a href="https://github.com/guruprasad-007" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://github.com/guruprasad-007" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile"
+              >
                 <FaGithub className="social-icon" />
               </a>
-              <a href="https://www.linkedin.com/in/guru-prasad-818116254/" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://www.linkedin.com/in/guru-prasad-818116254/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
+              >
                 <FaLinkedin className="social-icon" />
               </a>
             </div>
@@ -103,6 +119,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
+                aria-label="Your Name"
               />
             </div>
             <div className="form-group">
@@ -113,6 +130,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Email"
                 required
+                aria-label="Your Email"
               />
             </div>
             <div className="form-group">
@@ -122,6 +140,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Message"
                 required
+                aria-label="Your Message"
               ></textarea>
             </div>
             
@@ -129,6 +148,7 @@ const Contact = () => {
               type="submit" 
               className="submit-btn"
               disabled={loading}
+              aria-label="Send Message"
             >
               {loading ? 'Sending...' : 'Send Message'}
             </button>
