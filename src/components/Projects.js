@@ -76,6 +76,17 @@ const Projects = () => {
 
   const fullstackProjects = [
     {
+      title: "Next-Gen AI Learning Platform",
+      description: "Full-stack MERN application for personalized e-learning with AI assistant",
+      technologies: ["React.js", "Node.js", "Python", "Gemini API", "MERN Stack", "JWT"],
+      details: [
+        "Dynamic dashboard to track user progress and enrolled courses",
+        "Voice-activated AI assistant for hands-free navigation and course enrollment",
+        "Robust JWT authentication system for secure user data protection"
+      ],
+      image: process.env.PUBLIC_URL + "/lms.jpg.webp" // You'll need to add this image to your public folder
+    },
+    {
       title: "Portfolio Website",
       description: "Modern portfolio website",
       technologies: ["React.js", "CSS"],

@@ -31,7 +31,7 @@ const About = () => {
         {/* Right Image Section - moved to bottom on mobile */}
         <div className="about-image">
           <img
-            src={`${process.env.PUBLIC_URL}/profile.jpg`} 
+            src={`${process.env.PUBLIC_URL}/profile.png`} 
             alt="Guru Prasad"
             className="profile-image"
             onError={(e) => {

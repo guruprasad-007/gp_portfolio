@@ -57,7 +57,7 @@ const Footer = () => {
             <FaGithub className="social-icon" />
           </a>
           <a 
-            href="https://linkedin.com/in/guru-prasad" 
+            href="https://www.linkedin.com/in/guru-prasad-818116254/" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
