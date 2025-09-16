@@ -1,7 +1,6 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
-  "homepage": "https://guruprasad-007.github.io/gp_portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
